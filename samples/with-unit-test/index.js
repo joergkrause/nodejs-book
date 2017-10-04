@@ -1,6 +1,7 @@
-const debug = require('debug')('csv-app')
+const debug = require('debug')('csv-app');
 const fs = require('fs');
 const path = require('path');
+const parse = require('./parser/parse');
 
 const name = 'CSV Application';
 debug('Starting %s', name);
@@ -32,10 +33,3 @@ fs.open(inputFile, 'r', (err, fd) => {
   });
   }
 });
-
-function parse(content){
-  let ln = 1;
-  content.split(/\r?\n/).forEach(function(line){
-    debug('%s: %s ', ln++, line)
-  });
-}
