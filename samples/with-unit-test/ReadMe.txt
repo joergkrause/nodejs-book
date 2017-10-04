@@ -1,0 +1,1 @@
+This folder is for samples not related to projects. These script may not run on its own.
